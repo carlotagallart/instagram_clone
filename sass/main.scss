@@ -1,0 +1,299 @@
+$bgcolor: #fafafa;
+$greyFont: #262626;
+$blueFacebook : #385185;
+$blueTwitter: #0095f6;
+$font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+
+%lightGrey{
+    color:$greyFont;
+    font-weight: lighter;
+}
+
+%uppercase{
+    text-transform: uppercase;
+}
+%contents{
+    width: 400px;
+    margin: 15px;
+}
+
+%modal{
+    background-color: white;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 2px;
+
+}
+
+%inputs{
+    border-radius: 2px;
+    background-color: $bgcolor;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    font-weight: lighter;
+    padding-left: 10px;
+
+}
+
+%submit{
+    padding: 0px;
+    margin-top: 10px;
+    height: 30px;
+    background-color: $blueTwitter;
+    color: white;
+    border: 1px solid transparent;
+    font-weight: 600;
+}
+
+%imgLogo{
+    height: 65px;
+}
+
+%radius{
+    border-radius: 50%;
+}
+
+body{
+    font-family: $font;
+    margin: 0 auto;
+    background-color: $bgcolor;
+    .container{
+        margin-top: 30px;
+
+        .content{
+            justify-content: center;
+            // margin: auto;
+            // width: fit-content;
+            display: flex;
+            flex-direction: row;
+            .left-content{
+                @extend %contents;
+                .img-left-content{
+                    display: flex;
+                    align-content: center;
+                    height: 600px;
+                }
+            }
+            .right-content{
+                margin-top: 30px;
+                @extend %contents;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+.right-content{
+    .right-div-1{
+        @extend %modal;
+        padding: 0px 0px 20px 0px;
+        form{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            align-content: center;
+            input{
+                @extend %inputs;
+                height: 25px;
+                margin-bottom: 5px;
+            }
+            .login-submit{
+                @extend %submit;
+                font-family: $font;
+            }
+        }
+        .logo-img-login{
+            @extend %imgLogo;
+            margin: 20px 0px 20px 0;
+        }
+        .separador{
+            margin: 10px 0px 20px 0px;
+        }
+        .facebook-div{
+            margin: 0px 0px 15px 0px;
+            .click-facebook{
+                font-size: 14px;
+                color: $blueFacebook;
+                font-weight: 600;
+                padding-bottom: 5px;
+            }
+            img{
+                padding: 0px 10px 0px 10px;
+                height: 15px;
+            }
+        }
+        a{
+            font-size: 12px;
+            color: $blueFacebook;
+        }
+
+    }
+    .right-div-2{
+        @extend %modal;
+        font-size: 14px;
+        padding:20px 0px 20px;
+        margin: 10px 0px 10px;
+        @extend %lightGrey;
+        a{
+            color: $blueTwitter;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+    .right-div-3{
+        @extend %lightGrey;
+        padding: 10px;
+        img{
+            margin-top:15px;
+            height: 40px;
+        }
+    }
+}
+
+.footer-container{
+    position: relative;
+    width: 100%;
+    bottom: 0%;
+    left: 0%;
+    .footer-nav{
+        margin: auto;
+        width: 90%;
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            li{
+                @extend %uppercase;
+                list-style: none;
+                font-size: 12px;
+                margin-right: 10px;
+                color: $blueFacebook;
+                font-weight: 600;
+            }
+            span{
+                @extend %uppercase;
+                font-size: 12px;
+                font-weight: 600;
+                color: #8e8e8e;
+                margin-left: 200px;
+            }
+        }
+    }
+}
+
+// index.html
+
+.nav-bar{
+    height: 60px;
+    background-color: white;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+
+
+    .nav-bar-menu{
+        margin: auto;
+        padding: 15px;
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .nav-bar-logo{
+            .logo-img-index{
+                height: 40px;
+            }
+        }
+        .nav-bar-search{
+            .search{
+                height: 30px;
+                @extend %inputs;
+                width: 200px;
+            }
+        }
+        .nav-bar-icons{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-items: center;
+
+            i{
+                font-size: 30px;
+                color: $greyFont;
+                margin: 0px 20px 0px 0px;
+            }
+            img{
+                @extend %radius;
+                height: 30px;
+            }
+        }
+    }
+}
+
+.container-index{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.post{
+    @extend %modal;
+    margin: auto;
+    width: 40%;
+    height: 800px;
+    
+    .user-post{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        img{
+            height: 45px;
+            @extend %radius;
+        }
+        p{  margin-left: 15px;
+            font-weight: 600;
+            color: $blueFacebook;
+            font-size: 16px;
+        }
+    }
+    .picture-post{
+        height: 550px;
+        background-image: url("../assets/beron-post.jpg");
+        background-size: cover;
+    }
+    .picture-post-2{
+        height: 550px;
+        background-image: url("../assets/sayeed-post.jpg");
+        background-size: cover;
+    }
+    .icons-post{
+        padding-left: 20px;
+        margin-top: 10px;
+        font-weight: lighter;
+        font-size: 28px;
+        i{
+            margin-right: 10px;
+        }
+    }
+    .likes-post{
+        font-weight: bolder;
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+    .comment-post{
+        margin: 8px 0px 8px 0px;
+        padding-left: 35px;
+        display: flex;
+        flex-direction: row;
+        .user-comment-1{
+            font-weight: bolder;
+            margin-right: 10px;
+        }
+        .user-comment-2{
+            font-weight: 350;
+        }
+    }
+    .date-post{
+        @extend %uppercase;
+        padding-left: 20px;
+        font-weight: 300;
+    }
+}
