@@ -88,7 +88,27 @@ body .container .content .right-content {
   margin: 20px 0px 20px 0;
 }
 .right-content .right-div-1 .separador {
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 10px 0px 20px 0px;
+}
+.right-content .right-div-1 .separador .separador-left {
+  background-color: #dbdbdb;
+  height: 1.5px;
+  width: 28%;
+  margin-right: 20px;
+  position: relative;
+  top: 0.45em;
+}
+.right-content .right-div-1 .separador .separador-right {
+  background-color: #dbdbdb;
+  height: 1.5px;
+  width: 28%;
+  margin-left: 20px;
+  position: relative;
+  top: 0.45em;
 }
 .right-content .right-div-1 .facebook-div {
   margin: 0px 0px 15px 0px;
@@ -118,6 +138,7 @@ body .container .content .right-content {
   text-decoration: none;
 }
 .right-content .right-div-3 {
+  font-weight: 500;
   padding: 10px;
 }
 .right-content .right-div-3 img {
@@ -182,12 +203,14 @@ body .container .content .right-content {
   justify-items: center;
 }
 .nav-bar .nav-bar-menu .nav-bar-icons i {
-  font-size: 30px;
+  font-size: 25px;
   color: #262626;
   margin: 0px 20px 0px 0px;
 }
 .nav-bar .nav-bar-menu .nav-bar-icons img {
   height: 30px;
+  bottom: 0.2rem;
+  position: relative;
 }
 
 .container-index {
@@ -207,12 +230,15 @@ body .container .content .right-content {
   justify-items: center;
 }
 .post .user-post img {
+  margin-left: 10px;
   height: 45px;
+  top: 0.2rem;
+  position: relative;
 }
 .post .user-post p {
   margin-left: 15px;
   font-weight: 600;
-  color: #385185;
+  color: #262626;
   font-size: 16px;
 }
 .post .picture-post {
@@ -226,15 +252,16 @@ body .container .content .right-content {
   background-size: cover;
 }
 .post .icons-post {
+  color: #262626;
   padding-left: 20px;
   margin-top: 10px;
-  font-weight: lighter;
   font-size: 28px;
 }
 .post .icons-post i {
   margin-right: 10px;
 }
 .post .likes-post {
+  color: #262626;
   font-weight: bolder;
   padding-left: 20px;
   margin-top: 5px;
@@ -246,6 +273,7 @@ body .container .content .right-content {
   flex-direction: row;
 }
 .post .comment-post .user-comment-1 {
+  color: #262626;
   font-weight: bolder;
   margin-right: 10px;
 }
